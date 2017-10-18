@@ -1,0 +1,52 @@
+File Structure and Config Files:
+	You'll need to build this directory tree yourself until I get around to making a build 
+	script.
+
+
+	$MAINDIR/Menus/ -- Menu Splash Objects, what gets drawn to the screen
+	$MAINDIR/MenuCONFIG/ -- Holds objects with the options for each menu
+
+	$MAINDIR/Posts/ -- Where Post Directories are Found
+	$MAINDIR/Posts/MessageBases -- File which holds File Base Names
+	$MAINDIR/Posts/$MESSAGEBASE/ -- Where posts in each message base are
+	$MAINDIR/Posts/$MESSAGEBASE/MessageTree.dat -- Holds list of posts in Dir 
+
+	||$MAINDIR/Users/$Username.dat - User files. Contain a bcrypt hash of their password
+	
+	$MAINDIR/TextFiles/ - dir for Textfiles that are displayed by LINKTO
+	
+	$MAINDIR/WALL.wal - The wall or 'ONELINERS' file
+
+Menu Config Files: 
+
+	File Header: [ NAME_OF_MENU | NUMBER_OF_OPTIONS ]
+
+	Syntax:
+		KEYCODE = OPERATION
+
+		Keycode is simply the string you wish to trigger the operation.
+		
+
+		AVALIABLE Operations:
+
+			 POST :
+				Opens the Message Editor
+
+			SELECT $MESSAGEBASE: 
+				Selects a Message Base		
+			
+			LINKTO $TEXTFILE:
+				Links to a text file to display
+
+			GOTO $MENU:
+				goes to another menu
+
+			PRINT - $STRING:
+				prints a string, useful for debugging		
+
+
+			VIEW:
+				Runs the message viewer code
+
+			||WALL:
+				Runs the wal, program
