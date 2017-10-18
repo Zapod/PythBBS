@@ -143,7 +143,7 @@ class ResponseHandler():
 					self.bullit = open(('./TextFiles/' + self.file + '.txt'), 'r')
 					self.file = self.bullit.readlines()
 					self.bullit.close()
-					for self.line in self.bullit.readlines():
+					for self.line in self.file:
 						self.client.send(self.line)
 					self.client.recv(512)
 
