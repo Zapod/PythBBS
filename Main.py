@@ -142,7 +142,7 @@ class ResponseHandler():
 					self.file = self.oparray[(((self.oparray[0] * 2) + 1) + self.l)]
 					self.bullit = open(('./TextFiles/' + self.file + '.txt'), 'r')
 					self.file = self.bullit.readlines()
-					self.file.close()
+					self.bullit.close()
 					for self.line in self.bullit.readlines():
 						self.client.send(self.line)
 					self.client.recv(512)
