@@ -1,5 +1,5 @@
 #		PYTHBBS - A Python BBS Server
-#
+##
 #
 # Copyright (c) 2017, <REDACTED>
 #  All rights reserved.
